@@ -1,0 +1,21 @@
+{
+    "name": "com.sh.serializables",
+    "version": "1.0.0",
+    "displayName": "Serializables",
+    "description": "A package for the Unity game engine that provides support for serialization of custom types (e.g. System.Guid).",
+    "unity": "2021.1",
+    "documentationUrl": "https://github.com/SzymonHalucha/SH.Serializables/blob/main/README.md",
+    "changelogUrl": "https://github.com/SzymonHalucha/SH.Serializables/blob/main/CHANGELOG.md",
+    "licensesUrl": "https://github.com/SzymonHalucha/SH.Serializables/blob/main/LICENSE",
+    "keywords": [
+        "serialization",
+        "guid",
+        "types",
+        "property",
+        "drawer"
+    ],
+    "author": {
+        "name": "Szymon Hałucha",
+        "url": "https://github.com/SzymonHalucha"
+    }
+}
