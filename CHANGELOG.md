@@ -6,5 +6,5 @@
 
 ## 1.1.0 (09-06-2024)
 
-* Added operator overload for '=='
-* Added operator overload ofr '!='
+* Added operator overload for '=='.
+* Added operator overload for '!='.
