@@ -61,16 +61,6 @@ namespace SH.Serializables
             return Guid.ToString();
         }
 
-        public static implicit operator Guid(SerializableGuid guid)
-        {
-            return guid.Guid;
-        }
-
-        public static implicit operator SerializableGuid(Guid guid)
-        {
-            return new SerializableGuid(guid);
-        }
-
         public void OnAfterDeserialize()
         {
             if (_guid == null || (sizeof(byte) * _guid.Length) != 16)
@@ -91,6 +81,26 @@ namespace SH.Serializables
                 Guid = Guid.NewGuid();
             }
             _guid = Guid.ToByteArray();
+        }
+
+        public static implicit operator Guid(SerializableGuid guid)
+        {
+            return guid.Guid;
+        }
+
+        public static implicit operator SerializableGuid(Guid guid)
+        {
+            return new SerializableGuid(guid);
+        }
+
+        public static bool operator ==(SerializableGuid left, SerializableGuid right)
+        {
+            return left.Guid.Equals(right.Guid);
+        }
+
+        public static bool operator !=(SerializableGuid left, SerializableGuid right)
+        {
+            return !left.Guid.Equals(right.Guid);
         }
     }
 }
